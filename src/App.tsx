@@ -1,7 +1,13 @@
-import CreateGraphPage from "./components/pages/createGraphPage";
+import StudyChart from "./components/charts/studyChart";
+import GetApi from "./components/api/getApi";
 
 function App() {
-  return <CreateGraphPage />;
+  return (
+    <>
+      <StudyChart />;
+      <GetApi />
+    </>
+  );
 }
 
 export default App;
