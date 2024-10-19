@@ -6,6 +6,11 @@ const getPrefectures = async () => {
   console.log(data);
 }
 
+const getPopulation = async () => {
+  const data = await getData(generateUrl('api/v1/population/composition/perYear', 'prefCode=13&cityCode=-'));
+  console.log(data);
+}
+
 const generateUrl = (pathParameters: string, queryParameters: string = '') => {
   return `${resasApiBaseEndpoint}${pathParameters}?${queryParameters}`;
 }
@@ -25,4 +30,4 @@ const getData = async (url: string) => {
 
 }
 
-export { getPrefectures };
+export { getPrefectures, getPopulation };
