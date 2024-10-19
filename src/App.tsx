@@ -1,7 +1,7 @@
-import CreateGraphPage from "./components/pages/createGraphPage";
+import StudyChart from "./components/charts/studyChart";
 
 function App() {
-  return <CreateGraphPage />;
+  return <StudyChart />;
 }
 
 export default App;
