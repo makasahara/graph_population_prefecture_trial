@@ -6,9 +6,14 @@ const getPrefectures = async () => {
   console.log(data);
 }
 
-const getPopulation = async () => {
-  const data = await getData(generateUrl('api/v1/population/composition/perYear', 'prefCode=13&cityCode=-'));
-  console.log(data);
+const getPopulation = async (prefCodes: string[]) => {
+  for (const prefCode of prefCodes) {
+    const data = await getData(generateUrl(
+      'api/v1/population/composition/perYear', 
+      `prefCode=${prefCode}&cityCode=-`
+    ));
+    console.log(data);
+  }
 }
 
 const generateUrl = (pathParameters: string, queryParameters: string = '') => {
